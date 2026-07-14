@@ -1,0 +1,10 @@
+name: test_remove
+on: workflow_dispatch
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo "Hello Word"
+      - name: second step
+        run: echo "Done"
