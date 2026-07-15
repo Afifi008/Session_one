@@ -1,8 +1,8 @@
 name: test_workflow
 on: push
-jops: 
+jobs: 
   test:
-  runner-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
     - name: get code 
       uses: actions/checkout@v7
@@ -13,6 +13,6 @@ jops:
     - name: install requirements
       run: pip install -r requirements.txt
     - name: run test dag integrity
-      run:  pytest .\tests\test_dag_integrity_win.py -v
+      run:  pytest tests/test_dag_integrity_win.py -v
     - name: run test data quality
-      run: pytest .\tests\test_data_quality.py -v
+      run: pytest tests/test_data_quality.py -v
