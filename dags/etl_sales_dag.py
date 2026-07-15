@@ -74,7 +74,7 @@ def load() -> None:
 default_args = {
     "owner": "data-team",
     "depends_on_past": False,
-    "retries": 4,
+    "retries": 2,
     "retry_delay": timedelta(minutes=5),
 }
 
