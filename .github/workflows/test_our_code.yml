@@ -17,6 +17,7 @@ jobs:
       - name: run test data quality
         run: pytest tests/test_data_quality.py -v
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: get code 
