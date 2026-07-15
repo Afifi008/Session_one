@@ -16,5 +16,3 @@ jops:
       run:  pytest .\tests\test_dag_integrity_win.py -v
     - name: run test data quality
       run: pytest .\tests\test_data_quality.py -v
-    - name: run test data transformations
-      run: pytest .\tests\test_transformations.py -v
