@@ -2,17 +2,17 @@ name: test_workflow
 on: push
 jobs: 
   test:
-  runs-on: ubuntu-latest
-  steps:
-    - name: get code 
-      uses: actions/checkout@v7
-    - name: install python
-      uses: actions/setup-python@v6
-      with:
-        python-version: '3.11'
-    - name: install requirements
-      run: pip install -r requirements.txt
-    - name: run test dag integrity
-      run:  pytest tests/test_dag_integrity_win.py -v
-    - name: run test data quality
-      run: pytest tests/test_data_quality.py -v
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code 
+        uses: actions/checkout@v7
+      - name: install python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: install requirements
+        run: pip install -r requirements.txt
+      - name: run test dag integrity
+        run: pytest tests/test_dag_integrity_win.py -v
+      - name: run test data quality
+        run: pytest tests/test_data_quality.py -v
